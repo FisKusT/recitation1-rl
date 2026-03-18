@@ -1,0 +1,120 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{geometry}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{enumitem}
+
+\geometry{margin=1in}
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+
+\lstset{style=mystyle}
+
+\title{GUI Calculator - Project Report}
+\author{Tal Fiskus (208423707)}
+\date{March 18, 2026}
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+The objective of this project is to develop a robust and intuitive desktop-based graphical calculator application. The calculator caters to both basic arithmetic needs and common scientific calculations, providing a seamless user experience through a modern, dark-themed interface. This project was developed as part of the \textbf{Reinforcement Learning (RL) Course} at \textbf{Bar Ilan University (BIU)}.
+
+\section{Functional Requirements}
+
+\subsection{User Interface (UI)}
+\begin{itemize}
+    \item \textbf{Framework:} Developed using Python's \texttt{tkinter}.
+    \item \textbf{Display:} A primary digital display area for current inputs and real-time calculation results.
+    \item \textbf{Layout:} A grid-based layout for digits (0-9) and operation buttons.
+    \item \textbf{Theme:} A sleek, dark-themed UI for reduced eye strain and modern aesthetics.
+\end{itemize}
+
+\subsection{Core Operations}
+\begin{itemize}
+    \item \textbf{Basic Arithmetic:} Addition (+), Subtraction (-), Multiplication (*), and Division (/).
+    \item \textbf{Advanced Math:} Square Root ($\sqrt{x}$), Exponentiation ($x^y$), and Reciprocal ($1/x$).
+    \item \textbf{Precision:} Support for high-precision floating-point calculations.
+\end{itemize}
+
+\subsection{Memory and History}
+\begin{itemize}
+    \item \textbf{History Log:} A dedicated panel that tracks and displays a scrollable list of the last 10 calculations, allowing users to reference previous results.
+\end{itemize}
+
+\subsection{Error Handling}
+\begin{itemize}
+    \item \textbf{Graceful Failures:} The application does not crash on invalid inputs.
+    \item \textbf{Messaging:} Clear on-screen alerts for mathematical errors, such as \textit{"Error: Div by 0"} or \textit{"Error: Invalid Input"}.
+\end{itemize}
+
+\section{Technical Specifications}
+\begin{itemize}
+    \item \textbf{Language:} Python 3.x
+    \item \textbf{GUI Library:} Tkinter (Standard Library)
+    \item \textbf{Platform:} Cross-platform (Windows, Linux, Mac OS)
+\end{itemize}
+
+\section{Project Structure}
+The project consists of the following key files:
+\begin{itemize}
+    \item \textbf{\texttt{calculator.py}:} The main entry point of the application, handling the Tkinter GUI and user interactions.
+    \item \textbf{\texttt{logic.py}:} Contains the mathematical engine and the history management logic, separating calculation logic from the UI.
+    \item \textbf{\texttt{test\_logic.py}:} A dedicated testing suite for verifying arithmetic correctness, advanced functions, and error resilience.
+    \item \textbf{\texttt{PRD.md}:} Product Requirements Document detailing the project goals and specs.
+    \item \textbf{\texttt{README.md}:} Comprehensive documentation including installation and user manual.
+\end{itemize}
+
+\section{Testing and Validation}
+The project includes a robust testing suite in \texttt{test\_logic.py}. These tests ensure:
+\begin{enumerate}
+    \item \textbf{Arithmetic Correctness:} Verification of results for basic operations.
+    \item \textbf{Advanced Math:} Validation of power ($x^y$) and square root ($\sqrt{x}$) operations.
+    \item \textbf{Error Resilience:} Checking division by zero and invalid input handling.
+    \item \textbf{History Persistence:} Ensuring that calculations are logged correctly.
+\end{enumerate}
+
+\section{User Manual}
+\begin{itemize}
+    \item \textbf{Basic Calculation:} Click digits and operators and press \texttt{=} or \texttt{Enter}.
+    \item \textbf{Advanced Buttons:}
+    \begin{itemize}
+        \item \texttt{x\textsuperscript{2}}: Squares the current number.
+        \item \texttt{\textsurd}: Calculates the square root.
+        \item \texttt{\^}: General exponentiation.
+        \item \texttt{1/x}: Calculates the reciprocal.
+    \end{itemize}
+    \item \textbf{Correction:} Use \texttt{DEL} to remove the last character or \texttt{C} to clear the display.
+\end{itemize}
+
+\section{Conclusion}
+The GUI Calculator successfully meets all functional and non-functional requirements. It provides a reliable tool for basic and scientific calculations with a modern user interface and a robust mathematical core.
+
+\end{document}
