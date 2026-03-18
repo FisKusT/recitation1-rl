@@ -1,5 +1,5 @@
 # GUI Calculator - BIU RL Course Project
-# PULL TEST
+
 ## a. Objective
 The objective of this project is to provide a robust, cross-platform graphical calculator application. It is designed to handle basic arithmetic, advanced mathematical operations (square root, exponentiation, reciprocal), and complex expressions using parentheses, all within a modern, dark-themed user interface.
 
